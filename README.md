@@ -31,6 +31,16 @@ Built on top of the governance framework from Week 5, this is the operational do
 
 I also defined a severity classification system (Critical/High/Medium/Low, each with its own response-time target and notification authority), a communication and escalation plan with a concrete notification timeline, and **three scenario-specific playbooks**, each following the same Detect → Contain → Eradicate → Recover structure: one for backdoor/root-shell-type exploitation, one for credential theft and unauthorized remote access, and one for data exfiltration via an unauthorized file-sharing/database access path. The playbook closes with a printable quick-reference card and a incident-response checklist for critical/high-severity events.
 
+### Week 7 — Passive OSINT exposure assessment
+
+I ran a passive open-source intelligence (OSINT) exercise against a real, public organization — gathering only information that was already publicly available (DNS records, public web presence, standard OSINT reconnaissance techniques), with no systems accessed, no credentials tested, and no active scanning of anything outside the Metasploitable 2 lab.
+
+I'm intentionally not naming the organization or detailing the findings here. This exercise surfaced real, unpatched, security-relevant information about a live third party rather than the lab VM everything else on this page covers, and that isn't mine to publish. The findings were shared only within the internship program itself, and any responsible next step (notifying the organization) would go through a private channel, not a public repo.
+
+### Week 8 — Final report and project showcase
+
+I consolidated the full eight-week engagement — reconnaissance, the vulnerability assessment and risk analysis my teammates led, the governance policies and incident-response playbook above, and the Week 7 OSINT exercise — into a final written report and a presentation deck, and delivered the showcase live to the internship cohort.
+
 ## Done by my teammates as part of the group
 
 **Vulnerability assessment (Week 3).** Identified known CVEs affecting the target's exposed services, cross-referenced against the NIST National Vulnerability Database, plus a set of web-application findings from Nikto against the target's web service.
@@ -44,3 +54,7 @@ Kali Linux, Nmap, Nikto, NIST National Vulnerability Database.
 ## A note on scope
 
 In line with the training program's own confidentiality terms, this page stays at the level of method and outcome rather than reproducing raw scan output, lab IP addresses, exact CVE-to-port mappings, or the full original policy/playbook documents verbatim. The Metasploitable 2 target itself is a widely used, publicly documented training VM, freely available for anyone to practice against.
+
+## Note on files previously attached here
+
+Earlier versions of this repo briefly included the original Week 7 and Week 8 documents as attachments. They've been removed. Week 7's original report names a real organization along with specific, unpatched security findings about it; the Week 8 final report and showcase deck consolidate that same material. Neither belongs in a public repo tied to my name — the program's own permission to use this work for LinkedIn and similar doesn't extend to publishing a real institution's unpatched weaknesses, so those two documents are described only at the generic level above.
